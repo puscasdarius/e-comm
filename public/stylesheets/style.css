@@ -1,0 +1,40 @@
+body{
+  margin:0px;
+  padding:0px;
+
+}
+
+.panel{
+  margin-top: 100px;
+}
+
+.left-panel{
+  display: inline-block;
+  float: left;
+  width:30%;
+  padding:30px;
+}
+.right-panel{
+  display:inline-block;
+  float:right;
+  width:70%;
+  padding:30px;
+}
+
+#product_name{
+  display:inline;
+  float:left;
+}
+#product_delete{
+  display: inline;
+  float:right;
+}
+#product_price{
+  display:inline;
+  float:right;
+  margin:0px 10px;
+}
+#product_delete:hover{
+  color: red;
+  cursor:pointer
+}
