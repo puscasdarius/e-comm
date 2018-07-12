@@ -11,6 +11,10 @@ app.config(function($routeProvider,$locationProvider){
       templateUrl:'register/register.html',
       controller:'registerCtrl'
     })
+    .when('/view',{
+      templateUrl:'view/view.html',
+      controller:'viewCtrl'
+    })
     .when('/user/:id',{
       templateUrl:'user/user.html',
       controller:'userCtrl'

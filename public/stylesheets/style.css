@@ -8,6 +8,16 @@ body{
   margin-top: 100px;
 }
 
+.panel .card{
+  display:inline-block;
+  margin:10px;
+}
+
+.view_panel{
+  min-height: 580px;
+  overflow-y: hidden;
+}
+
 .left-panel{
   display: inline-block;
   float: left;
@@ -19,6 +29,11 @@ body{
   float:right;
   width:70%;
   padding:30px;
+}
+
+.pagination{
+  width:10%;
+  margin:0px auto;
 }
 
 #product_name{
