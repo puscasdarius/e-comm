@@ -1,5 +1,6 @@
 app.controller('viewCtrl',function($scope,$http){
   $scope.title = "View Page";
+  $scope.order_option = "name";
   let products = [];
   let current_page = 0;
 
@@ -9,6 +10,16 @@ app.controller('viewCtrl',function($scope,$http){
 
   }
 
+  //Function used to order elements
+  $scope.ordering = function(){
+    if($scope.order_option == "price"){
+      return '+price';
+    }else{
+      return 'name';
+    }
+  }
+
+  //Initialize page
   function init_list(){
     get_products().then(function(response){
       products = response;
@@ -16,6 +27,8 @@ app.controller('viewCtrl',function($scope,$http){
     })
   }
 
+  //Used to retreive products and divide them
+  // in fixed size arrays(9 elems)
   function get_products(){
     let i = 0;
     let j = 0;
@@ -41,6 +54,7 @@ app.controller('viewCtrl',function($scope,$http){
     })
   }
 
+  
   $scope.prev_page = function(){
     if(current_page <= 0){
       $scope.products = products[0];
